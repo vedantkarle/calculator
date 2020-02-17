@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="calc.css" />
+
+    <title>CALCULATOR</title>
+    <script>
+      function btn1() {
+        document.getElementById("numberfield").value += "1";
+      }
+      function btn2() {
+        document.getElementById("numberfield").value += "2";
+      }
+      function btn3() {
+        document.getElementById("numberfield").value += "3";
+      }
+      function btn4() {
+        document.getElementById("numberfield").value += "4";
+      }
+      function btn5() {
+        document.getElementById("numberfield").value += "5";
+      }
+      function btn6() {
+        document.getElementById("numberfield").value += "6";
+      }
+      function btn7() {
+        document.getElementById("numberfield").value += "7";
+      }
+      function btn8() {
+        document.getElementById("numberfield").value += "8";
+      }
+      function btn9() {
+        document.getElementById("numberfield").value += "9";
+      }
+      function btn0() {
+        document.getElementById("numberfield").value += "0";
+      }
+      function clearfield() {
+        document.getElementById("numberfield").value = " ";
+      }
+      function point() {
+        document.getElementById("numberfield").value += ".";
+      }
+      function add() {
+        document.getElementById("numberfield").value += "+";
+      }
+      function subtract() {
+        document.getElementById("numberfield").value += "-";
+      }
+      function divide() {
+        document.getElementById("numberfield").value += "/";
+      }
+      function multiply() {
+        document.getElementById("numberfield").value += "*";
+      }
+      function equals() {
+        let x = document.getElementById("numberfield").value;
+        let y = eval(x);
+        document.getElementById("numberfield").value = y;
+      }
+    </script>
+  </head>
+  <body>
+    <main>
+      <input id="numberfield" />
+      <div class="keys">
+        <button class="op__keys" op="clear" onclick="clearfield()">C</button>
+        <button class="op__keys" op="negate" onclick="changesign()">+/-</button>
+        <button class="op__keys" op="percent" onclick="percent()">%</button>
+        <button class="op__keys" op="divide" onclick="divide()">/</button>
+        <button class="num__keys" onclick="btn7()">7</button>
+        <button class="num__keys" onclick="btn8()">8</button>
+        <button class="num__keys" onclick="btn9();">9</button>
+        <button class="op__keys" op="multiply" onclick="multiply()">x</button>
+        <button class="num__keys" onclick="btn4()">4</button>
+        <button class="num__keys" onclick="btn5()">5</button>
+        <button class="num__keys" onclick="btn6()">6</button>
+        <button class="op__keys" op="subtract" onclick="subtract()">-</button>
+        <button class="num__keys" onclick="btn1()">1</button>
+        <button class="num__keys" onclick="btn2()">2</button>
+        <button class="num__keys" onclick="btn3()">3</button>
+        <button class="op__keys" op="add" onclick="add()">+</button>
+        <span></span>
+        <button class="num__keys" onclick="btn0()">0</button>
+        <button class="num__keys" onclick="point()">.</button>
+        <button class="eq__keys" op="equals" onclick="equals()">=</button>
+      </div>
+    </main>
+  </body>
+</html>
